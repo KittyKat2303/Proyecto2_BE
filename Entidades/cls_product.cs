@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class cls_product
     {
-        #region VARIABLES PRIVADAS
+        #region VARIABLES PUBLICAS
         public int iId { get; set; }
         public string sNombre { get; set; }
         public cls_product() 
