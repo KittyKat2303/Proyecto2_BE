@@ -29,20 +29,7 @@ namespace DAL
         {
             return _lstProduct.FirstOrDefault(v => v.iId == id);
         }
-        /*public List<cls_product> ConsultaFiltrada(cls_product Obj_Product) 
-        {
-            List<cls_product> lstResultado = new List<cls_product>();
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            return lstResultado;
-        }*/
+       
         public void Add(cls_product obj_Product)
         {
             obj_Product.iId = _lstProduct.Max(v => v.iId) + 1;
