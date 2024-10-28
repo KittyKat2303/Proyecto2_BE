@@ -24,6 +24,10 @@ namespace BLL
         {
             return Obj_Product_DAL.GetById(id);
         }
+        public List<cls_product> ConsultaFiltrada(cls_product P_Entidad) 
+        {
+            return Obj_Product_DAL.ConsultaFiltrada(P_Entidad);
+        }
         public void AddValue(cls_product Obj_Product)
         {
             Obj_Product_DAL.Add(Obj_Product);

@@ -31,7 +31,7 @@ namespace WebApi_BE.Controllers
         // GET: api/values/5
         [HttpGet("{id}")]
         [Route(nameof(FiltrarProduct))]
-        public ActionResult<cls_product> FiltrarProduct([FromHeader] int id)
+        public ActionResult<cls_product> FiltrarProduct(int id)
         {
             var value = Obj_Product_BLL.GetValueById(id);
             if (value == null)
@@ -39,6 +39,17 @@ namespace WebApi_BE.Controllers
                 return NotFound();
             }
             return value;
+            
+        }
+
+        [HttpGet]
+        [Route(nameof(ConsultarProduct))]
+        public List<cls_product> ConsultarProduct([FromHeader] int id) 
+        {
+            return Obj_Product_BLL.ConsultaFiltrada(new cls_product
+                {
+                    iId = id
+                });
         }
 
         // POST: api/values

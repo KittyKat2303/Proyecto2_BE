@@ -29,7 +29,31 @@ namespace DAL
         {
             return _lstProduct.FirstOrDefault(v => v.iId == id);
         }
-       
+        public List<cls_product> ConsultaFiltrada(cls_product P_Entidad)
+        {
+            List<cls_product> lstResultado = new List<cls_product>();
+            try
+            {
+                if (!string.IsNullOrEmpty(P_Entidad.iId.ToString()))
+                {
+                    lstResultado = _lstProduct.Where(doc => doc.iId == P_Entidad.iId).OrderBy(orden => orden.sNombre).ToList();
+                }
+                else if (!string.IsNullOrEmpty(P_Entidad.sNombre))
+                {
+                    lstResultado = _lstProduct.Where(doc => doc.sNombre.Equals(P_Entidad.sNombre)).OrderBy(orden => orden.sNombre).ToList();
+                }
+                else
+                {
+                    lstResultado = _lstProduct.OrderBy(orden => orden.sNombre).ToList(); // Devuelve todo ordenado por nombre
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
+            return lstResultado;
+        }
         public void Add(cls_product obj_Product)
         {
             obj_Product.iId = _lstProduct.Max(v => v.iId) + 1;
