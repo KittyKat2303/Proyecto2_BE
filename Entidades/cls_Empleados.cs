@@ -12,10 +12,20 @@ namespace Entidades
         #region VARIABLES PUBLICAS
         public int iCedula { get; set; }
         public string sNombreCompleto{ get; set; }
-        public DateTime FechaNacimiento { get; set; }
-        public string Lateralidad { get; set; }
-        public DateTime FechaIngreso { get; set; }
-        public float SalarioHora { get; set; }
+        public DateTime dtmFechaNacimiento { get; set; }
+        public string sLateralidad { get; set; }
+        public DateTime dtmFechaIngreso { get; set; }
+        public float fSalarioHora { get; set; }
+        public cls_Empleados() 
+        {
+            iCedula = 0;
+            sNombreCompleto = string.Empty;
+            dtmFechaNacimiento = DateTime.MinValue;
+            sLateralidad = string.Empty;
+            dtmFechaIngreso = DateTime.MinValue;
+            fSalarioHora = 0;
+        }
+
         #endregion
     }
 }

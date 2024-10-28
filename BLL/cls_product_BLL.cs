@@ -14,12 +14,11 @@ namespace BLL
         private cls_product_DAL Obj_Product_DAL = new cls_product_DAL();
         #endregion
 
+        #region MÉTODOS
         public List<cls_product> GetAllValues()
         {
             return Obj_Product_DAL.GetAll();
         }
-
-        #region MÉTODOS
         public cls_product GetValueById(int id)
         {
             return Obj_Product_DAL.GetById(id);
