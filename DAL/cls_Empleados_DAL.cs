@@ -19,6 +19,7 @@ namespace DAL
         #endregion
 
         #region MÉTODOS EMPLEADOS
+
         public List<cls_Empleados> GetAll()
         {
             return _lstEmpleado;
@@ -53,15 +54,19 @@ namespace DAL
         }
         public void Add(cls_Empleados P_Entidad)
         {
-            P_Entidad.iCedula = _lstEmpleado.Max(v => v.iCedula) + 1;
+            //P_Entidad.iCedula = _lstEmpleado.Max(v => v.iCedula) + 1;
             _lstEmpleado.Add(P_Entidad);
         }
         public void Update(cls_Empleados P_Entidad)
         {
-            var existingProduct = GetById(P_Entidad.iCedula);
-            if (existingProduct != null)
+            var existingEmpleado = GetById(P_Entidad.iCedula);
+            if (existingEmpleado != null)
             {
-                existingProduct.sNombreCompleto = P_Entidad.sNombreCompleto;
+                existingEmpleado.sNombreCompleto = P_Entidad.sNombreCompleto;
+                existingEmpleado.dtmFechaNacimiento = P_Entidad.dtmFechaNacimiento;
+                existingEmpleado.sLateralidad = P_Entidad.sLateralidad;
+                existingEmpleado.dtmFechaIngreso = P_Entidad.dtmFechaIngreso;
+                existingEmpleado.fSalarioHora = P_Entidad.fSalarioHora;
             }
         }
         public void Delete(int id)
