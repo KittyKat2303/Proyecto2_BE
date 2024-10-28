@@ -18,9 +18,7 @@ namespace DAL
     };
         #endregion
 
-        #region METODOS
-
-        #region EMPLEADO
+        #region MÉTODOS EMPLEADOS
         public List<cls_Empleados> GetAll()
         {
             return _lstEmpleado;
@@ -74,8 +72,6 @@ namespace DAL
                 _lstEmpleado.Remove(empleado);
             }
         }
-
-        #endregion
         #endregion
     }
 }
