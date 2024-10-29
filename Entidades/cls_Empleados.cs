@@ -25,7 +25,6 @@ namespace Entidades
             dtmFechaIngreso = DateTime.MinValue;
             fSalarioHora = 0;
         }
-
         #endregion
     }
 }
