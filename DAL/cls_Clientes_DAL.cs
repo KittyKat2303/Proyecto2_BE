@@ -9,19 +9,30 @@ namespace DAL
 {
     public class cls_Clientes_DAL
     {
-        #region VARIABLE PRIVADA   
-        private static List<cls_Clientes> _lstClientes = new List<cls_Clientes>
-        { new cls_Clientes { Identificacion = 123456789, NombreCompleto = "Bill Skarsgard", Provincia = "Heredia",
-           Canton = "Heredia", Distrito = "Heredia", DireccionExacta = "Calle Flores, Casa #105", MantenimientoInvierno = 15, 
-           MantenimientoVerano = 15}
-        };
+        #region VARIABLE PÚBLICA
+        public static List<cls_Clientes> _lstClientesRecibe = new List<cls_Clientes>();
         #endregion
 
+        #region VARIABLE PRIVADA   
+        private static List<cls_Clientes> _lstClientes = new List<cls_Clientes>
+        { new cls_Clientes {    Identificacion = 123456789, 
+                                NombreCompleto = "Bill Skarsgard", 
+                                Provincia = "Heredia",
+                                Canton = "Heredia", 
+                                Distrito = "Heredia", 
+                                DireccionExacta = "Calle Flores, Casa #105", 
+                                MantenimientoInvierno = 15, 
+                                MantenimientoVerano = 15
+                            }
+        };
+        #endregion
+        
         #region MÉTODOS EMPLEADOS
 
         public List<cls_Clientes> GetAll()
         {
             return _lstClientes;
+            //_lstClientesRecibe = _lstClientes;
         }
         public cls_Clientes GetById(int id)
         {
