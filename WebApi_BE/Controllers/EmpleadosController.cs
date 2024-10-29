@@ -22,7 +22,7 @@ namespace WebApi_BE.Controllers
         #region MÉTODOS
         // GET: api/values
         [HttpGet]
-        [Route(nameof(ListarEmpleado))] //BORRAR ROUTE DE SER NECESARIO
+        [Route(nameof(ListarEmpleado))] 
         public ActionResult<List<cls_Empleados>> ListarEmpleado() //Get()
         {
             return Obj_Empleado_BLL.GetAllValues();
