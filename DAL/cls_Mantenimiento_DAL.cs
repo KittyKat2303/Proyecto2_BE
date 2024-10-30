@@ -17,8 +17,8 @@ namespace DAL
         private static List<cls_Mantenimiento> _lstMantenimiento = new List<cls_Mantenimiento>
         { new cls_Mantenimiento {   IdMantenimiento = 1,
                                     IdCliente = 1,      //_lstClientesRecibe.FirstOrDefault().Identificacion, // Referencia a la Identificacion de _lstClientes //IdCliente = 1, 
-                                    FechaEjecutado = DateTime.Parse("20/10/2024"),
-                                    FechaAgendado = DateTime.Parse("24/10/2024"), 
+                                    FechaEjecutado = DateTime.Parse("10/10/2024"),
+                                    FechaAgendado = DateTime.Parse("12/10/2024"), 
                                     MetrosPropiedad = 100, 
                                     MetrosCercaViva = 100, 
                                     DiasSinChapia = "4",
