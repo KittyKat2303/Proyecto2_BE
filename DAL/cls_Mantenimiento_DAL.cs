@@ -9,12 +9,27 @@ namespace DAL
 {
     public class cls_Mantenimiento_DAL
     {
+        #region VARIABLE PÚBLICA
+        public static List<cls_Clientes> _lstClientesRecibe;
+        #endregion
+
         #region VARIABLE PRIVADA   
         private static List<cls_Mantenimiento> _lstMantenimiento = new List<cls_Mantenimiento>
-        { new cls_Mantenimiento { IdMantenimiento = 1, IdCliente = 1, FechaEjecutado = DateTime.Parse("20/10/2024"),
-        FechaAgendado = DateTime.Parse("24/10/2024"), MetrosPropiedad = 100, MetrosCercaViva = 100, DiasSinChapia = "4",
-        FechaOtraChapia = "03/11/2024", TipoZacate = "San Agustín", AplicacionProducto = "Sí", 
-        ProductoAplicado = "Random", CostoChapia = 3000, CostoAplicacionProducto = 9000, EstadoMantenimiento = "En Proceso"}
+        { new cls_Mantenimiento {   IdMantenimiento = 1,
+                                    IdCliente = 1,      //_lstClientesRecibe.FirstOrDefault().Identificacion, // Referencia a la Identificacion de _lstClientes //IdCliente = 1, 
+                                    FechaEjecutado = DateTime.Parse("10/10/2024"),
+                                    FechaAgendado = DateTime.Parse("12/10/2024"), 
+                                    MetrosPropiedad = 100, 
+                                    MetrosCercaViva = 100, 
+                                    DiasSinChapia = "4",
+                                    FechaOtraChapia = "03/11/2024", 
+                                    TipoZacate = "San Agustín", 
+                                    AplicacionProducto = "Sí", 
+                                    ProductoAplicado = "Random", 
+                                    CostoChapia = 3000, 
+                                    CostoAplicacionProducto = 9000, 
+                                    EstadoMantenimiento = "En Proceso"
+                                }
         };
         #endregion
 

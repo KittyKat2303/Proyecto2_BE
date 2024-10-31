@@ -11,9 +11,12 @@ namespace DAL
     {
         #region VARIABLE PRIVADA   
         private static List<cls_Empleados> _lstEmpleados = new List<cls_Empleados>
-        { new cls_Empleados { iCedula = 123456789, sNombreCompleto = "Theo James", 
-            dtmFechaNacimiento = DateTime.Parse("02/02/2002"), dtmFechaIngreso = DateTime.Now, sLateralidad = "Diestro", 
-            fSalarioHora = 1800}
+        { new cls_Empleados {   iCedula = 123456789, 
+                                sNombreCompleto = "Theo James", 
+                                dtmFechaNacimiento = DateTime.Parse("02/02/2002"), 
+                                dtmFechaIngreso = DateTime.Now, 
+                                sLateralidad = "Diestro", 
+                                fSalarioHora = 1800}
         };
         #endregion
 

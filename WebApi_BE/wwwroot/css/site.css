@@ -27,3 +27,10 @@ body {
 .semi-transparent {
     opacity: 0.8;
 }
+
+p {
+    font-family: 'Bodoni MT';
+    font-size: 20px;
+    text-indent: 30px;
+    background-color: lightgoldenrodyellow;
+}
