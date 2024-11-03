@@ -33,7 +33,7 @@ namespace DAL
         };
         #endregion
 
-        #region MÉTODOS EMPLEADOS
+        #region MÉTODOS MANTENIMIENTO
 
         public List<cls_Mantenimiento> GetAll()
         {
@@ -41,14 +41,14 @@ namespace DAL
         }
         public cls_Mantenimiento GetById(int id)
         {
-            return _lstMantenimiento.FirstOrDefault(v => v.IdMantenimiento == id);
+            return _lstMantenimiento.FirstOrDefault(v => v.IdMantenimiento == id); //Método para obtener un elemento por su ID
         }
-        public List<cls_Mantenimiento> ConsultaFiltrada(cls_Mantenimiento P_Entidad)
+        public List<cls_Mantenimiento> ConsultaFiltrada(cls_Mantenimiento P_Entidad) //Método para realizar una consulta filtrada 
         {
-            List<cls_Mantenimiento> lstResultado = new List<cls_Mantenimiento>();
+            List<cls_Mantenimiento> lstResultado = new List<cls_Mantenimiento>(); //Crea una lista para almacenar el resultado de la consulta
             try
             {
-                if (!string.IsNullOrEmpty(P_Entidad.IdMantenimiento.ToString()))
+                if (!string.IsNullOrEmpty(P_Entidad.IdMantenimiento.ToString())) //Filtra los elementos y los ordena 
                 {
                     lstResultado = _lstMantenimiento.Where(doc => doc.IdMantenimiento == P_Entidad.IdMantenimiento).OrderBy(orden => orden.TipoZacate).ToList();
                 }

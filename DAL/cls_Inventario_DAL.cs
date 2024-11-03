@@ -10,12 +10,12 @@ namespace DAL
     public class cls_Inventario_DAL
     {
         #region VARIABLE PRIVADA   
-        private static List<cls_Inventario> _lstInventario = new List<cls_Inventario>
+        private static List<cls_Inventario> _lstInventario = new List<cls_Inventario> //Se crea uno por defecto
         { new cls_Inventario { IdInventario = 1, Descripcion = "Mediana", TipoMaquina = "Shindaiwa", HorasActuales = 1, 
             HorasMaximas = 1000, HorasMantenimiento = 100}
         };
         #endregion
-        #region MÉTODOS EMPLEADOS
+        #region MÉTODOS INVENTARIO
 
         public List<cls_Inventario> GetAll()
         {
@@ -23,14 +23,14 @@ namespace DAL
         }
         public cls_Inventario GetById(int id)
         {
-            return _lstInventario.FirstOrDefault(v => v.IdInventario == id);
+            return _lstInventario.FirstOrDefault(v => v.IdInventario == id); //Método para obtener un elemento por su ID
         }
-        public List<cls_Inventario> ConsultaFiltrada(cls_Inventario P_Entidad)
+        public List<cls_Inventario> ConsultaFiltrada(cls_Inventario P_Entidad) //Método para realizar una consulta filtrada 
         {
-            List<cls_Inventario> lstResultado = new List<cls_Inventario>();
+            List<cls_Inventario> lstResultado = new List<cls_Inventario>(); //Crea una lista para almacenar el resultado de la consulta
             try
             {
-                if (!string.IsNullOrEmpty(P_Entidad.IdInventario.ToString()))
+                if (!string.IsNullOrEmpty(P_Entidad.IdInventario.ToString()))  //Filtra los elementos y los ordena 
                 {
                     lstResultado = _lstInventario.Where(doc => doc.IdInventario == P_Entidad.IdInventario).OrderBy(orden => orden.Descripcion).ToList();
                 }

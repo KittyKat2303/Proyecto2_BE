@@ -17,27 +17,27 @@ namespace BLL
         #region MÉTODOS
         public List<cls_Mantenimiento> GetAllValues()
         {
-            return Obj_Mantenimiento_DAL.GetAll();
+            return Obj_Mantenimiento_DAL.GetAll(); //Llama a los métodos
         }
         public cls_Mantenimiento GetValueById(int id)
         {
-            return Obj_Mantenimiento_DAL.GetById(id);
+            return Obj_Mantenimiento_DAL.GetById(id); //Llama a los métodos
         }
         public List<cls_Mantenimiento> ConsultaFiltrada(cls_Mantenimiento P_Entidad)
         {
-            return Obj_Mantenimiento_DAL.ConsultaFiltrada(P_Entidad);
+            return Obj_Mantenimiento_DAL.ConsultaFiltrada(P_Entidad); //Llama a los métodos
         }
         public void AddValue(cls_Mantenimiento P_Entidad)
         {
-            Obj_Mantenimiento_DAL.Add(P_Entidad);
+            Obj_Mantenimiento_DAL.Add(P_Entidad); //Llama a los métodos
         }
         public void UpdateValue(cls_Mantenimiento P_Entidad)
         {
-            Obj_Mantenimiento_DAL.Update(P_Entidad);
+            Obj_Mantenimiento_DAL.Update(P_Entidad); //Llama a los métodos
         }
         public void DeleteValue(int id)
         {
-            Obj_Mantenimiento_DAL.Delete(id);
+            Obj_Mantenimiento_DAL.Delete(id); //Llama a los métodos
         }
         #endregion
     }

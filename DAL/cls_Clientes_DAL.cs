@@ -14,7 +14,7 @@ namespace DAL
         #endregion
 
         #region VARIABLE PRIVADA   
-        private static List<cls_Clientes> _lstClientes = new List<cls_Clientes>
+        private static List<cls_Clientes> _lstClientes = new List<cls_Clientes> //Se crea uno por defecto
         { new cls_Clientes {    Identificacion = 123456789, 
                                 NombreCompleto = "Bill Skarsgard", 
                                 Provincia = "Heredia",
@@ -27,7 +27,7 @@ namespace DAL
         };
         #endregion
         
-        #region MÉTODOS EMPLEADOS
+        #region MÉTODOS CLIENTES
 
         public List<cls_Clientes> GetAll()
         {
@@ -36,14 +36,14 @@ namespace DAL
         }
         public cls_Clientes GetById(int id)
         {
-            return _lstClientes.FirstOrDefault(v => v.Identificacion == id);
+            return _lstClientes.FirstOrDefault(v => v.Identificacion == id); //Método para obtener un elemento por su ID
         }
-        public List<cls_Clientes> ConsultaFiltrada(cls_Clientes P_Entidad)
+        public List<cls_Clientes> ConsultaFiltrada(cls_Clientes P_Entidad) //Método para realizar una consulta filtrada 
         {
-            List<cls_Clientes> lstResultado = new List<cls_Clientes>();
+            List<cls_Clientes> lstResultado = new List<cls_Clientes>(); //Crea una lista para almacenar el resultado de la consulta
             try
             {
-                if (!string.IsNullOrEmpty(P_Entidad.Identificacion.ToString()))
+                if (!string.IsNullOrEmpty(P_Entidad.Identificacion.ToString()))  //Filtra los elementos y los ordena 
                 {
                     lstResultado =_lstClientes.Where(doc => doc.Identificacion == P_Entidad.Identificacion).OrderBy(orden => orden.NombreCompleto).ToList();
                 }

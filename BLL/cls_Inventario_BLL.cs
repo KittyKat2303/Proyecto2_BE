@@ -17,27 +17,27 @@ namespace BLL
         #region MÉTODOS
         public List<cls_Inventario> GetAllValues()
         {
-            return Obj_Inventario_DAL.GetAll();
+            return Obj_Inventario_DAL.GetAll(); //Llama a los métodos
         }
         public cls_Inventario GetValueById(int id)
         {
-            return Obj_Inventario_DAL.GetById(id);
+            return Obj_Inventario_DAL.GetById(id); //Llama a los métodos
         }
         public List<cls_Inventario> ConsultaFiltrada(cls_Inventario P_Entidad)
         {
-            return Obj_Inventario_DAL.ConsultaFiltrada(P_Entidad);
+            return Obj_Inventario_DAL.ConsultaFiltrada(P_Entidad); //Llama a los métodos
         }
         public void AddValue(cls_Inventario P_Entidad)
         {
-            Obj_Inventario_DAL.Add(P_Entidad);
+            Obj_Inventario_DAL.Add(P_Entidad); //Llama a los métodos
         }
         public void UpdateValue(cls_Inventario P_Entidad)
         {
-            Obj_Inventario_DAL.Update(P_Entidad);
+            Obj_Inventario_DAL.Update(P_Entidad); //Llama a los métodos
         }
         public void DeleteValue(int id)
         {
-            Obj_Inventario_DAL.Delete(id);
+            Obj_Inventario_DAL.Delete(id); //Llama a los métodos
         }
         #endregion
     }

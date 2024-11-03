@@ -10,7 +10,7 @@ namespace DAL
     public class cls_Empleados_DAL
     {
         #region VARIABLE PRIVADA   
-        private static List<cls_Empleados> _lstEmpleados = new List<cls_Empleados>
+        private static List<cls_Empleados> _lstEmpleados = new List<cls_Empleados> //Se crea uno por defecto
         { new cls_Empleados {   iCedula = 123456789, 
                                 sNombreCompleto = "Theo James", 
                                 dtmFechaNacimiento = DateTime.Parse("02/02/2002"), 
@@ -26,16 +26,16 @@ namespace DAL
         {
             return _lstEmpleados;
         }
-        public cls_Empleados GetById(int id)
+        public cls_Empleados GetById(int id) //Método para obtener un elemento por su ID
         {
             return _lstEmpleados.FirstOrDefault(v => v.iCedula == id);
         }
-        public List<cls_Empleados> ConsultaFiltrada(cls_Empleados P_Entidad)
+        public List<cls_Empleados> ConsultaFiltrada(cls_Empleados P_Entidad) //Método para realizar una consulta filtrada 
         {
-            List<cls_Empleados> lstResultado = new List<cls_Empleados>();
+            List<cls_Empleados> lstResultado = new List<cls_Empleados>(); //Crea una lista para almacenar el resultado de la consulta
             try
             {
-                if (!string.IsNullOrEmpty(P_Entidad.iCedula.ToString()))
+                if (!string.IsNullOrEmpty(P_Entidad.iCedula.ToString()))  //Filtra los elementos y los ordena 
                 {
                     lstResultado = _lstEmpleados.Where(doc => doc.iCedula == P_Entidad.iCedula).OrderBy(orden => orden.sNombreCompleto).ToList();
                 }

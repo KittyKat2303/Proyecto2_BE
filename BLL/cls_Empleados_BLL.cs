@@ -17,27 +17,27 @@ namespace BLL
         #region MÉTODOS
         public List<cls_Empleados> GetAllValues()
         {
-            return Obj_Empleados_DAL.GetAll();
+            return Obj_Empleados_DAL.GetAll(); //Llama a los métodos
         }
         public cls_Empleados GetValueById(int id)
         {
-            return Obj_Empleados_DAL.GetById(id);
+            return Obj_Empleados_DAL.GetById(id); //Llama a los métodos
         }
         public List<cls_Empleados> ConsultaFiltrada(cls_Empleados P_Entidad)
         {
-            return Obj_Empleados_DAL.ConsultaFiltrada(P_Entidad);
+            return Obj_Empleados_DAL.ConsultaFiltrada(P_Entidad); //Llama a los métodos
         }
         public void AddValue(cls_Empleados P_Entidad)
         {
-            Obj_Empleados_DAL.Add(P_Entidad);
+            Obj_Empleados_DAL.Add(P_Entidad); //Llama a los métodos
         }
         public void UpdateValue(cls_Empleados P_Entidad)
         {
-            Obj_Empleados_DAL.Update(P_Entidad);
+            Obj_Empleados_DAL.Update(P_Entidad); //Llama a los métodos
         }
         public void DeleteValue(int id)
         {
-            Obj_Empleados_DAL.Delete(id);
+            Obj_Empleados_DAL.Delete(id); //Llama a los métodos
         }
         #endregion
     }
